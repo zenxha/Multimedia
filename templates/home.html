@@ -1,0 +1,272 @@
+<html>
+    <head>    
+      <title>Scrum Team Webpage | Home </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body>
+      
+      <div class="container-fluid">
+        <div class="row justify-content-start" style="padding-top: 10%; padding-bottom: 2%; padding: 2%;">
+          <div>
+            <h5>Group Members: Kian Kishimoto, Komay Sugiyama, Christopher Rubin, Megan Corrigan, Ridhima Inukurti </h5>
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <div class="topnav">
+          <a class="navbar-brand" href="#">{{name}}</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
+              <a href="#">About</a>
+              <a href="#">Contact</a>
+              <input type="text" placeholder="Search..." class="row justify-content-end"></input>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+
+      
+    <div class="container-fluid">
+      <div class="row justify-content-end" style="padding-top: 2%; padding-bottom: 2%; padding: 2%;">
+        <div style="text-align: justified-content-right;">
+
+            <h2>Websites</h2>
+            <a href="https://flaskportfolio.komaysugiyama.repl.co/">
+              <h4>Kian Kishimoto</h4></a>
+            <a href="https://flaskportfolio.komaysugiyama.repl.co/">
+              <h4>Komay Sugiyama</h4></a>
+            <a href= "https://repl.it/@ChristopherRub1/flaskportfolio-1#templates/home.html">
+            <h4>Christopher Rubin</h4></a>
+              <a href= "https://megan-website.megancorrigan.repl.co/">
+                <h4>Megan Corrigan</h4></a>
+              <a href="https://repl.it/join/uvlcpsqd-ridhimainukurt1">
+                <h4>Ridhima Inukurti</h4></a>
+
+          </div>
+      </div>
+    </div>
+
+
+            <!--
+            <div class="row justify-content-center">
+
+                <h1>Portfolio</h1>
+
+            </div>
+            -->
+            <!--
+            <div class="product" style="margin-top: 2%;">
+              <div class="row" style="padding: 5%; padding-top: 2%; padding-bottom: 2%;">
+
+                  <div class="col-8" >
+                      <h1>Hello Series Project</h1>
+                  </div>
+
+              </div>
+
+              <div class="row" style="padding-left: 10%;">
+                  <div class="col-4">
+                      <a href="http://nighthawkcoders.cf/courses/python/" class="btn">Project Plan</a>
+                  </div>
+
+                  <div class="col-4">
+                      <a href="https://repl.it/@jmort1021/Python-Hello-Series#README.md" class="btn">Repl</a>
+                  </div>
+
+                  <div class="col-4">
+                      <a href="https://padlet.com/jmortensen7/csp2021" class="btn">Resources</a>
+                  </div>
+
+              </div>
+
+            </div>
+
+            -->
+            <div class="product" style="margin-top: -20%;">
+              <div class="row" style="padding: 2%; padding-top: 2%; padding-bottom: 2%;">
+
+                  <div class="col-8" >
+                      <h1> Scrum Team Project Webpage</h1>
+                  </div>
+
+              </div>
+
+              <div class="row" style="padding-left, justify-content-end: 10%;">
+                  <div class="col-4">
+                      <a href="https://docs.google.com/document/d/1WNg0iUyMPIdX0ylkGJPh7Cbw3pLvXkygEUZ3sPjB_Kw/edit?usp=sharing" class="btn">Project Plan</a>
+                  </div>
+
+                  <div class="col-2">
+                      <a href= "#"
+                      class="btn">Repl</a>
+                  </div>
+                  
+                  <div class="col-4">
+                      <a href="#"
+                      class="btn">Project Document</a>
+                  </div>
+
+              </div>
+
+            </div>
+
+
+        </div>
+
+    </body>  
+
+    
+    <script src="https://threejs.org/build/three.js"></script>
+    <script src="{{ url_for('static', filename='vanta.fog.min.js') }}"></script>
+    <script>
+    VANTA.FOG({
+      el: "body",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 400.00,
+      minWidth: 400.00,
+      highlightColor: 0xff8ab8,
+      midtoneColor: 0xffbf92,
+      lowlightColor: 0xff8097,
+      baseColor: 0xffdccb,
+      blurfactor: 0.55,
+      speed: 1.20
+     })
+      </script>
+
+
+
+
+    <style>
+
+      :root {
+          --font-family-sans-serif: "-apple-system",BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+          --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",Courier New,monospace;
+     }
+
+
+
+        html, body {
+            margin: 0;
+            height: 100%;
+            font-family:: Arial;
+            color: mediumpurple;
+        }
+
+        h1{
+            font-size: 5em;
+        }
+        
+        a:link, a:visited {
+            color: #ffeea8;
+            text-decoration: underline;
+            cursor: pointer;
+            }
+
+        a:link:active, a:visited:active, a:hover {
+            color: mediumslateblue;
+        }
+        
+        
+        .fa{
+            font-size: 3em;
+            letter-spacing: 1em;
+            transition: all .2s;
+            color: #ffe4a8;
+        }
+
+        .fa:hover{
+            transform: translateY(10px);
+            color: aquamarine;
+        }
+
+        .btn:link,
+        .btn:visited {
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 15px 40px;
+            display: inline-block;
+            border-radius: 100px;
+            transition: all .2s;
+            position: absolute;
+            color: #5b3ba4;
+            font-size: 2.5em;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
+        }
+
+        .btn:active {
+            transform: translateY(-1px);
+            box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
+        }
+        
+        .topnav{
+          overflow: hidden;
+          background-color: #e9e9e9;
+        }
+
+        .topnav a {
+          float: left;
+          display: block;
+          color: black;
+          text-align: center;
+          padding: 14px 16px
+          text-decoration: none;
+          font-size: 17px;
+        }
+
+        .topnav a:hover {
+          background-color: #ddd;
+          color: black;
+        }
+
+        .topnav a.active {
+          background-color: #2196F3;
+          color: white;
+        }
+
+        .topnav input[type=text] {
+          float: right;
+          padding: 6px;
+          border: none;
+          margin-top: 8px;
+          margin-right: 16px;
+          font-size: 17px;
+        }
+
+      @media screen and (max-width: 600px) 
+        .topnav a, .topnav input[type=text] {
+          float: none;
+          display: block;
+          text-align: left;
+          width: 100%;
+          margin: 0;
+          padding: 14px;
+        }
+        .topnav input[type=text]{
+          border: 1px solid #ccc;
+        }
+
+
+    </style>
+
+</html>
