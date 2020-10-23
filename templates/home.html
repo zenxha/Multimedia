@@ -1,12 +1,12 @@
 <html>
-    <head>    
+    <head>
       <title>Scrum Team Webpage | Home </title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
     <body>
-      
+
       <div class="container-fluid">
         <div class="row justify-content-start" style="padding-top: 10%; padding-bottom: 2%; padding: 2%;">
           <div>
@@ -18,29 +18,27 @@
       </div>
 
 
-
-
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <div class="topnav">
-          <a class="navbar-brand" href="#">{{name}}</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
-              <a href="#">About</a>
-              <a href="#">Contact</a>
-              <input type="text" placeholder="Search..." class="row justify-content-end"></input>
-            </div>
-          </div>
+      <a class="navbar-brand" href="#">{{name}}</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <h2><a class="nav-link" href="/">Haunted House Sim</a></h2>
+          <h5><a class="nav-link active" href="/">Home <span class="sr-only">(current)</span></a></h5>
+          <h5><a class="nav-link" href="#">About</a></h5>
+          <h5><a class="nav-link" href="#">Contact</a></h5>
+          <div class="search-container">
+          <form action="/action_page.php">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
         </div>
       </div>
     </nav>
 
 
-      
     <div class="container-fluid">
       <div class="row justify-content-end" style="padding-top: 2%; padding-bottom: 2%; padding: 2%;">
         <div style="text-align: justified-content-right;">
@@ -115,7 +113,7 @@
                       <a href= "#"
                       class="btn">Repl</a>
                   </div>
-                  
+
                   <div class="col-4">
                       <a href="#"
                       class="btn">Project Document</a>
@@ -128,9 +126,9 @@
 
         </div>
 
-    </body>  
+    </body>
 
-    
+
     <script src="https://threejs.org/build/three.js"></script>
     <script src="{{ url_for('static', filename='vanta.fog.min.js') }}"></script>
     <script>
@@ -172,7 +170,7 @@
         h1{
             font-size: 5em;
         }
-        
+
         a:link, a:visited {
             color: #ffeea8;
             text-decoration: underline;
@@ -182,10 +180,10 @@
         a:link:active, a:visited:active, a:hover {
             color: mediumslateblue;
         }
-        
-        
+
+
         .fa{
-            font-size: 3em;
+            font-size: 1.45em;
             letter-spacing: 1em;
             transition: all .2s;
             color: #ffe4a8;
@@ -218,7 +216,7 @@
             transform: translateY(-1px);
             box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
         }
-        
+
         .topnav{
           overflow: hidden;
           background-color: #e9e9e9;
@@ -245,16 +243,16 @@
         }
 
         .topnav input[type=text] {
-          float: right;
-          padding: 6px;
-          border: none;
-          margin-top: 8px;
-          margin-right: 16px;
-          font-size: 17px;
-        }
+            float: right;
+            padding: 6px;
+            border: none;
+            margin-top: 8px;
+            margin-right: 16px;
+            font-size: 17px;
+          }
 
-      @media screen and (max-width: 600px) 
-        .topnav a, .topnav input[type=text] {
+      @media screen and (max-width: 600px)
+        topnav a, topnav input[type=text] {
           float: none;
           display: block;
           text-align: left;
@@ -266,6 +264,20 @@
           border: 1px solid #ccc;
         }
 
+      .topnav .search-container {
+          float: right;
+      }
+
+      .topnav .search-container button {
+          float: right;
+          padding: 6px 10px;
+          margin-top: 8px;
+          margin-right: 16px;
+          background: #ddd;
+          font-size: 17px;
+          border: none;
+          cursor: pointer;
+          }
 
     </style>
 
