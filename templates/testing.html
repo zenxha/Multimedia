@@ -1,3 +1,5 @@
+<!-- made by Komay Sugiyama -->
+
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -5,6 +7,10 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+
+
+
 <script type="text/javascript">
 $(document).ready(function () {
 $('.navbar-light .dmenu').hover(function () {
@@ -19,7 +25,60 @@ $('.navbar-light .dmenu').hover(function () {
 <html lang="en">
 <head>
 
-  <title>Testing</title>
+
+  <style>
+  html, body {
+    height:100%;
+    background-color: #666699;
+  }
+    .social-part .fa{
+      padding-right:20px;
+    }
+    ul li a{
+      margin-right: 20px;
+    }
+
+  .well {
+    background-color: #ffffee
+  }
+
+  #content {
+    padding: 25% 25% 5%;
+  }
+
+  .search-form {
+    border-radius: 30px 0 0 30px;
+  }
+
+  .input-group {
+    width:100%;
+  }
+
+  input-group-btn {
+    max-width:38px;
+  }
+
+  #search {
+    border: 1px;
+  }
+
+  .search-btn {
+    cursor:pointer;
+    border-radius: 0 30px 30px 0;
+    background-color:#fff;
+    color:#669;
+
+  }
+
+  .text-center {
+    color: #fff;
+  }
+</style>
+
+
+
+
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -97,16 +156,25 @@ $('.navbar-light .dmenu').hover(function () {
     </div>
   </div>
 </nav>
+<div class="container">
+  <div id="content">
+    <form class='form-inline'>
+      <div class="input-group">
+        <input type='text' id='search' class="form-control search-form" placeholder="Search something">
+        <span class="input-group-btn" style="width:39px">
+              <button id="search-this"type="button" class="pull-right btn btn-default search-btn">
+                  <i class="fa fa-search"></i>
+              </button>
+            </span>
+      </div>
+    </form>
 
+    <p class="text-center">Some centered text</p>
+
+
+  </div>
+</div>
 
 </body>
 
 </html>
-<style>
-  .social-part .fa{
-    padding-right:20px;
-  }
-  ul li a{
-    margin-right: 20px;
-  }
-</style>
