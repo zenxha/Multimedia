@@ -1,0 +1,26 @@
+
+
+<html>
+
+<script src="https://threejs.org/build/three.js"></script>
+<script src="{{ url_for('static', filename='vanta.fog.min.js') }}"></script>
+<script>
+    VANTA.FOG({
+      el: "body",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 400.00,
+      minWidth: 400.00,
+      highlightColor: 0xff8ab8,
+      midtoneColor: 0xffbf92,
+      lowlightColor: 0xff8097,
+      baseColor: 0xffdccb,
+      blurfactor: 0.55,
+      speed: 1.20
+     })
+    </script>
+
+
+
+</html>

@@ -11,16 +11,26 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     #Flask import uses Jinga to render HTML
-    return render_template("home.html")
+    return render_template("home.html", projects=projects.setup())
 
-@app.route('/amazon')
+@app.route('/amazon/')
 def amazon():
-    return render_template("amazon.html")
+    return render_template("amazon.html", projects=projects.setup())
 
-@app.route('/testing')
+@app.route('/template1')
 def testing():
-    return render_template("testing.html")
+    return render_template("template1.html", projects=projects.setup())
+
+@app.route('/selfgrade/')
+def selfgrade():
+    return render_template("selfgrade.html", projects=projects.setup())
+
+@app.route('/navbarrotation/')
+def navbarrotation():
+    return render_template("navbarrotation.html", projects=projects.setup())
 
 if __name__ == "__main__":
     #runs the application on the repl development server
-    app.run(debug=True, port='3000', host='0.0.0.0')
+    app.run(debug=True, port='3000', host='127.0.0.1')
+
+

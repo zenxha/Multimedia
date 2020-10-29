@@ -1,0 +1,112 @@
+
+
+<html Lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device=width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<nav>
+    <li>
+        <a href="">Home
+            <span class="link-space">
+          <span class="fare">Home</span>
+          <span class-"back">Home</span>
+            </span>
+        </a>
+    </li>
+    <li>
+        <a href="">About
+            <span class="link-space">
+          <span class="fare">About</span>
+          <span class-"back">About</span>
+            </span>
+        </a>
+    </li><li>
+    <a href="">Contact
+        <span class="link-space">
+          <span class="fare">Contact</span>
+          <span class-"back">Contact</span>
+        </span>
+    </a>
+</li>
+</nav>
+</body>
+<style>
+    body{
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      overflow: hidden;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to bottom, #8E2387, #E94057, #F27121);
+    }
+
+    nav{
+      top: 50%;
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+    }
+
+    li{
+      list-style: none;
+      display: inline-block:
+    }
+
+    a{
+      color: #fff;
+      display: block;
+      position: relative;
+      line-height: 1.25rem;
+      persepctive: 12.5rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 0.9375rem 1.875rem;
+      transition: all .3s linear;
+    }
+
+    a:not(.active):hover .Link-space{
+      transform: translateZ(-1.5625rem) rotateX(90deg);
+    }
+
+    .Link-space{
+      top: 0;
+      left:0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      pointer-events: none;
+      transition: all .3s ease-out;
+      transform-style: preserve-3d;
+    }
+
+    .fare{
+      transform: rotateX(0deg) translateZ(1.5635rem);
+    }
+
+    .back{
+      transform: rotateX(-90deg) translateZ(1.5625rem);
+    }
+
+    .fare, .back{
+      width: 100%;
+      height: 100%;
+      color: #444;
+      display: block;
+      position: absolute;
+      background: #fff;
+      box-sizing: border-box;
+      padding: 0.9375rem 1.875rem;
+    }
+
+    nav li a:hover .fare,
+    nav li a:hover .back{
+      color: #fff;
+      background-color: #444;
+      background-size: 0.3125rem 0.3125rem;
+    }
+  <style>
+</html>

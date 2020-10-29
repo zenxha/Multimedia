@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<!-- made by Komay Sugiyama -->
+<html lang="en">
+
+
+
+
+<script type="text/javascript">
+$(document).ready(function () {
+$('.navbar-light .dmenu').hover(function () {
+        $(this).find('.sm-menu').first().stop(true, true).slideDown(150);
+    }, function () {
+        $(this).find('.sm-menu').first().stop(true, true).slideUp(105)
+    });
+});
+</script>
+
+<head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!------ Include the above in HEAD tag ---------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+
+
+
+    <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    th:nth-child(1n) {
+      background-color: lightsalmon;
+    }
+
+    tr:nth-child(even) {
+      background-color: white;
+    }
+
+    tr:nth-child(odd) {
+     background-color: mistyrose;
+    }
+
+    html, body {
+      height:100%;
+      background-color: #666699;
+    }
+    .social-part .fa{
+      padding-right:20px;
+    }
+    ul li a{
+      margin-right: 20px;
+    }
+
+    .well {
+      background-color: #ffffee
+    }
+
+    #content {
+      padding: 25% 25% 5%;
+    }
+
+    .search-form {
+      border-radius: 30px 0 0 30px;
+    }
+
+    .input-group {
+      width:100%;
+    }
+
+    input-group-btn {
+      max-width:38px;
+    }
+
+    #search {
+      border: 1px;
+    }
+
+    .search-btn {
+      cursor:pointer;
+      border-radius: 0 30px 30px 0;
+      background-color:#fff;
+      color:#669;
+
+    }
+
+    .text-center {
+      color: #fff;
+    }
+</style>
+
+
+
+
+
+    <title>Base Template</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,500i,700,800i" rel="stylesheet">
+</head>
+
+
+<body>
+
+
+
+</span><nav class="navbar navbar-expand-sm   navbar-light bg-light" style="z-index: 1;">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" href="https://e-commerce.christopherrub1.repl.co/">E-Commerce <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item dropdown dmenu">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    Portfolios
+                </a>
+                <div class="dropdown-menu sm-menu" style="display: none;">
+                    <a class="dropdown-item" href="https://flaskportfolio.komaysugiyama.repl.co/">Kian + Komay</a>
+                    <a class="dropdown-item" href="https://myflaskportfolio.ridhimainukurt1.repl.co/">Ridhima + Meghan + Chris</a>
+
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/selfgrade">Self-Grades</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Call</a>
+            </li>
+            <!-- <li class="nav-item dropdown dmenu">
+             <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+               Dropdown link
+             </a>
+             <div class="dropdown-menu sm-menu">
+               <a class="dropdown-item" href="#">Link 1</a>
+               <a class="dropdown-item" href="#">Link 2</a>
+               <a class="dropdown-item" href="#">Link 3</a>
+               <a class="dropdown-item" href="#">Link 4</a>
+               <a class="dropdown-item" href="#">Link 5</a>
+               <a class="dropdown-item" href="#">Link 6</a>
+             </div>
+           </li> -->
+        </ul>
+        <div class="social-part">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+        </div>
+    </div>
+
+</nav>
+
+{% block body %}
+<h1>start adding stuff</h1>
+{% endblock %}
+
+<script src="https://threejs.org/build/three.js"></script>
+<script src="{{ url_for('static', filename='vanta.fog.min.js') }}"></script>
+<script>
+    VANTA.FOG({
+      el: "body",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 400.00,
+      minWidth: 400.00,
+      highlightColor: 0xff8ab8,
+      midtoneColor: 0xffbf92,
+      lowlightColor: 0xff8097,
+      baseColor: 0xffdccb,
+      blurfactor: 0.55,
+      speed: 1.20
+     })
+     </script>
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+

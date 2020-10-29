@@ -1,9 +1,22 @@
+<!doctype html>
+{% set source = projects.get_source() %} <!-- source of project dict -->
+{% set projects = projects.get_projects() %} <!-- projects data -->
+
+{% set name = source["name"] %}
+{% set kian = source["kian"] %}
+{% set komay = source["komay"] %}
+{% set chris = source["chris"] %}
+{% set megan = source["megan"] %}
+{% set ridhima = source["ridhima"] %}
+
 <html>
 <head>
-    <title>Scrum Team Webpage | Home </title>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
+
 <body>
 <!-- made by Ridhima Inukurti -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -14,36 +27,38 @@
     <!-- made by Chris Rubin -->
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-            <h2><a class="nav-link" href="/">Haunted House Sim</a></h2>
-            <h5><a class="nav-link active" href="/">Home <span class="sr-only">(current)</span></a></h5>
+            <h5><a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a></h5>
             <h5><a class="nav-link" href="#">About</a></h5>
             <h5><a class="nav-link" href="#">Contact</a></h5>
-            <h5><a class="nav-link" href="testing">Test page </a><a/h2>
-                <div class="search-container">
-                    <form action="/action_page.php">
-                        <input type="text" placeholder="Search.." name="search">
-                        <button type="submit"><i class="fa fa-search"></i></button>
-                    </form>
-                </div>
+            <h5><a class="nav-link" href="template1">Test page </a></h5>
+            <h5><a class="nav-link" href="selfgrade">Self grade</a></h5>
+            <!-- <div class="search-container">
+            <form action="/action_page.php">
+              <input type="text" placeholder="Search.." name="search">
+              <button type="submit"><i class="fa fa-search"></i></button>   -->
+            </form>
         </div>
+    </div>
 </nav>
 
-<!--made by Chris R -->
 <div class="container-fluid">
     <div class="row justify-content-end" style="padding-top: 2%; padding-bottom: 2%; padding: 2%;">
-        <div style="text-align: justified-content-right;">
-
+        <div style="text-align: justify-content-end;">
+            <!--made by Megan C -->
+            <!-- Jinja by Chris R -->
             <h2>Websites</h2>
-            <a href="https://flaskportfolio.komaysugiyama.repl.co/">
+            {% block info %}
+            <a href={{kian}} target="_blank">
                 <h4>Kian Kishimoto</h4></a>
-            <a href="https://flaskportfolio.komaysugiyama.repl.co/">
+            <a href={{komay}} target="_blank">
                 <h4>Komay Sugiyama</h4></a>
-            <a href= "https://repl.it/@ChristopherRub1/flaskportfolio-1#templates/home.html">
+            <a href={{chris}} target="_blank">
                 <h4>Christopher Rubin</h4></a>
-            <a href= "https://megan-website.megancorrigan.repl.co/">
+            <a href={{megan}} target="_blank">
                 <h4>Megan Corrigan</h4></a>
-            <a href="https://repl.it/join/uvlcpsqd-ridhimainukurt1">
+            <a href={{ridhima}} target="_blank">
                 <h4>Ridhima Inukurti</h4></a>
+            {% endblock %}
         </div>
     </div>
 </div>
@@ -72,7 +87,6 @@
         </div>
     </div>
 </div>
-</div>
 </body>
 
 
@@ -84,8 +98,8 @@
       mouseControls: true,
       touchControls: true,
       gyroControls: false,
-      minHeight: 400.00,
-      minWidth: 400.00,
+      minHeight: 350.00,
+      minWidth: 350.00,
       highlightColor: 0xff8ab8,
       midtoneColor: 0xffbf92,
       lowlightColor: 0xff8097,
@@ -150,7 +164,7 @@
             border-radius: 100px;
             transition: all .2s;
             position: absolute;
-            color: #5b3ba4;
+            color: mediumpurple;
             font-size: 2.5em;
         }
 
@@ -162,6 +176,10 @@
         .btn:active {
             transform: translateY(-1px);
             box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+          color: black;
         }
 
         .topnav{
