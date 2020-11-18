@@ -1,0 +1,38 @@
+{% extends "template1.html" %}
+
+{% block head %}
+    <div class="row justify-content-center" style="margin-right: 10%; margin-left: 10%; margin-bottom: -10%; color: yellow;">
+        <h1>Share Your Spotify Playlist<h2>
+    </div>
+{% endblock %}
+{% block body %}
+  {% block background %}
+  minHeight: 2000.00,
+  minWidth: 400.00,
+  {% endblock %}
+
+  <form method="POST">
+    <div class="row justify-content-center" style="margin-right: 10%;margin-left: 10%; margin-top: 10%">
+      <div class="Save a Link" style="width: 40%">
+          <input type="text" class="searchTerm" name="link" placeholder="https://open.spotify.com/embed/playlist/PLAYLIST-ID" style="width: 80%;">
+        <button type="submit" class="btn btn-outline-success">Share!
+        </button>
+      </div>
+    </div>
+
+    <div class = "links" style="margin-top: 10%">
+      <h1>User submitted playlists</h1> 
+    {% for item in links %}
+    
+      <div class="box"" style="margin-left: 5%;width: 80%; height: 100%;">
+        <iframe src={{ item }} width="300" height="380"  align="left" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+          </div>
+
+    {% endfor %}
+{% endblock %}
+
+      <style>
+      .box {
+        display:inline-block;
+      }
+      </style>

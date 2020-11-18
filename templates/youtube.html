@@ -1,0 +1,43 @@
+{% extends "template1.html" %}
+
+{% block background %}
+minHeight: 2000.00,
+minWidth: 400.00,
+{% endblock %}
+
+{% block head %}
+    <div class="container justify-content-center" style="margin-left: 25%;margin-bottom: -10%;color: yellow;">
+    </div>
+    <div class="row justify-content-center" style="margin-top: 10%;margin-right: 10%; margin-left: 10%; margin-bottom: -20%; color: yellow;">
+        <h1>Share a Youtube Video</h1>
+    </div>
+{% endblock %}
+{% block body %}
+  <form method="POST">
+    <div class="row justify-content-center" style="margin-right: 10%;margin-left: 10%; margin-top: 20%">
+      <div class="Save a Link" style="width: 30%">
+          <input type="text" class="searchTerm" name="link" placeholder="https://youtube/embed/VIDEO-ID" style="width: 80%;">
+        <button type="submit" class="btn btn-outline-success">Share!
+        </button>
+      </div>
+    </div>
+
+    <div class = "links" style="margin-top: 10%">
+      <h1>User submitted videos</h1> 
+    {% for item in links %}
+      <div class="box" style="margin-left: 5%;width: 80%; height: 100%;">
+        <iframe align = "left" frameborder="0" width="427px" height="240px" src={{item}}></iframe>
+      </div>
+    {% endfor %}
+{% endblock %}
+
+      <style>
+      .box {
+        display:inline-block;
+      }
+
+      img.animated-gif{
+      width: 120px;
+      height: auto;
+      }
+      </style>

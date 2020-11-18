@@ -1,0 +1,47 @@
+ <!-- use for loops with jinja to make a new card for every item -->
+{% extends "template1.html" %}
+
+
+{% block body %}
+<style>
+  .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+</style>
+
+
+<div class="card">
+  <img src="https://www.streamscheme.com/wp-content/uploads/2020/08/pog.png" alt="Denim Jeans" style="width:100%">
+  <h1>Pog</h1>
+  <p class="price">$420.69</p>
+  <p>poggers.</p>
+  <p><button>View on [[E-commerce Website]]</button></p>
+</div>
+
+
+{% endblock %}
