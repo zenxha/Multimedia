@@ -15,12 +15,17 @@ def home():
     form = request.form
     product = form['product']  
     open("products.txt", "a").write("\n" + product)
+    a = open("products.txt", "r").read()
+    popular = a.split("\n")
+    if(len(popular) > 7):
+      popular.pop(0)
+      seperator = '\n'
+      newContent = seperator.join(popular)
+      open("products.txt", "w").write(newContent)
     return redirect("https://www.amazon.com/s?k=" + product +"&ref=nb_sb_noss")
   a = open("products.txt", "r").read()
   popular = a.split("\n")
-  # if(len(a) > 8):
-  #  print('Updated popular items list')
-  #  open("products.txt", "w").write(popular.pop(1).join('\n'))
+  return render_template('home.html', projects=model.setup(), popular=popular)
 
   return render_template("home.html", projects=projects.setup(), popular=popular)
 
