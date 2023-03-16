@@ -25,7 +25,7 @@ def home():
     return redirect("https://www.amazon.com/s?k=" + product +"&ref=nb_sb_noss")
   a = open("products.txt", "r").read()
   popular = a.split("\n")
-  return render_template('home.html', projects=model.setup(), popular=popular)
+  return render_template('home.html', projects=projects.setup(), popular=popular)
 
   return render_template("home.html", projects=projects.setup(), popular=popular)
 
@@ -98,6 +98,10 @@ def popularitems():
   popular = a.split("\n")
   return render_template("popularitem.html", projects=projects.setup(), popular=popular)
 
+
+@app.route('/week/')
+def week():
+  return render_template('week.html')
 
 if __name__ == "__main__":
     #runs the application on the repl development server

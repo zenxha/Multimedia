@@ -1,0 +1,511 @@
+ <!-- use for loops with jinja to make a new card for every item -->
+ {% extends "template1.html" %}
+
+
+ {% block body %}
+ <style>
+   .card {
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+   max-width: 300px;
+   margin: auto;
+   text-align: center;
+   font-family: arial;
+ }
+ 
+ .price {
+   color: grey;
+   font-size: 22px;
+ }
+ 
+ .card button {
+   border: none;
+   outline: 0;
+   padding: 12px;
+   color: white;
+   background-color: #000;
+   text-align: center;
+   cursor: pointer;
+   width: 100%;
+   font-size: 18px;
+ }
+ 
+ .card button:hover {
+   opacity: 0.7;
+ }
+ </style>
+ 
+<div style="padding-top:5%; z-index: -1"></div> 
+
+<table>
+    <tr>
+        <th>
+            Time
+        </th>
+        <th>
+            Sunday
+        </th>
+        <th>
+            Monday
+        </th>
+        <th>
+            Tuesday
+        </th>
+        <th>
+            Wednesday
+        </th>
+        <th>
+            Thursday
+        </th>
+        <th>
+            Friday
+        </th>
+        <th>
+            Saturday
+        </th>
+    </tr>
+    <tr>
+        <td>
+            6:00 AM
+        </td>
+        <td>
+            sun
+        </td>
+        <td>
+            m
+        </td>
+        <td>
+           t 
+        </td>
+        <td>
+           w 
+        </td>
+        <td>
+            th
+        </td>
+        <td>
+            f
+        </td>
+        <td>
+            sat
+        </td>
+    </tr>
+    <tr>
+        <td>
+            7:00 AM
+        </td>
+        <td>
+            sun
+        </td>
+        <td>
+            m
+        </td>
+        <td>
+           t 
+        </td>
+        <td>
+           w 
+        </td>
+        <td>
+            th
+        </td>
+        <td>
+            f
+        </td>
+        <td>
+            sat
+        </td>
+    </tr>
+    <tr>
+        <td>
+            8:00 AM
+        </td>
+        <td>
+            sun
+        </td>
+        <td>
+            m
+        </td>
+        <td>
+           t 
+        </td>
+        <td>
+           w 
+        </td>
+        <td>
+            th
+        </td>
+        <td>
+            f
+        </td>
+        <td>
+            sat
+        </td>
+    </tr>
+    <tr>
+        <td>
+            9:00 AM
+        </td>
+        <td>
+            sun
+        </td>
+        <td>
+            m
+        </td>
+        <td>
+           t 
+        </td>
+        <td>
+           w 
+        </td>
+        <td>
+            th
+        </td>
+        <td>
+            f
+        </td>
+        <td>
+            sat
+        </td>
+    </tr>
+    <tr>
+        <td>
+            10:00 AM
+        </td>
+        <td>
+            sun
+        </td>
+        <td>
+            m
+        </td>
+        <td>
+           t 
+        </td>
+        <td>
+           w 
+        </td>
+        <td>
+            th
+        </td>
+        <td>
+            f
+        </td>
+        <td>
+            sat
+        </td>
+    </tr>
+    <tr>
+        <td>
+            11:00 AM
+        </td>
+        <td>
+            sun
+        </td>
+        <td>
+            m
+        </td>
+        <td>
+           t 
+        </td>
+        <td>
+           w 
+        </td>
+        <td>
+            th
+        </td>
+        <td>
+            f
+        </td>
+        <td>
+            sat
+        </td>
+    </tr>
+    <tr>
+        <td>
+            12:00 PM
+        </td>
+        <td>
+            sun
+        </td>
+        <td>
+            m
+        </td>
+        <td>
+           t 
+        </td>
+        <td>
+           w 
+        </td>
+        <td>
+            th
+        </td>
+        <td>
+            f
+        </td>
+        <td>
+            sat
+        </td>
+    </tr>
+    <tr>
+        <td>
+            1:00 PM
+        </td>
+        <td>
+            sun
+        </td>
+        <td>
+            m
+        </td>
+        <td>
+           t 
+        </td>
+        <td>
+           w 
+        </td>
+        <td>
+            th
+        </td>
+        <td>
+            f
+        </td>
+        <td>
+            sat
+        </td>
+    </tr>
+    <tr>
+        <td>
+            2:00 PM
+        </td>
+        <td>
+            sun
+        </td>
+        <td>
+            m
+        </td>
+        <td>
+           t 
+        </td>
+        <td>
+           w 
+        </td>
+        <td>
+            th
+        </td>
+        <td>
+            f
+        </td>
+        <td>
+            sat
+        </td>
+    </tr>
+    <tr>
+        <td>
+            3:00 PM
+        </td>
+        <td>
+            sun
+        </td>
+        <td>
+            m
+        </td>
+        <td>
+           t 
+        </td>
+        <td>
+           w 
+        </td>
+        <td>
+            th
+        </td>
+        <td>
+            f
+        </td>
+        <td>
+            sat
+        </td>
+    </tr>
+    <tr>
+        <td>
+            4:00 PM
+        </td>
+        <td>
+            sun
+        </td>
+        <td>
+            m
+        </td>
+        <td>
+           t 
+        </td>
+        <td>
+           w 
+        </td>
+        <td>
+            th
+        </td>
+        <td>
+            f
+        </td>
+        <td>
+            sat
+        </td>
+    </tr>
+    <tr>
+        <td>
+            5:00 PM
+        </td>
+        <td>
+            sun
+        </td>
+        <td>
+            m
+        </td>
+        <td>
+           t 
+        </td>
+        <td>
+           w 
+        </td>
+        <td>
+            th
+        </td>
+        <td>
+            f
+        </td>
+        <td>
+            sat
+        </td>
+    </tr>
+    <tr>
+        <td>
+            6:00 PM
+        </td>
+        <td>
+            sun
+        </td>
+        <td>
+            m
+        </td>
+        <td>
+           t 
+        </td>
+        <td>
+           w 
+        </td>
+        <td>
+            th
+        </td>
+        <td>
+            f
+        </td>
+        <td>
+            sat
+        </td>
+    </tr>
+    <tr>
+        <td>
+            7:00 PM
+        </td>
+        <td>
+            sun
+        </td>
+        <td>
+            m
+        </td>
+        <td>
+           t 
+        </td>
+        <td>
+           w 
+        </td>
+        <td>
+            th
+        </td>
+        <td>
+            f
+        </td>
+        <td>
+            sat
+        </td>
+    </tr>
+    <tr>
+        <td>
+            8:00 PM
+        </td>
+        <td>
+            sun
+        </td>
+        <td>
+            m
+        </td>
+        <td>
+           t 
+        </td>
+        <td>
+           w 
+        </td>
+        <td>
+            th
+        </td>
+        <td>
+            f
+        </td>
+        <td>
+            sat
+        </td>
+    </tr>
+    <tr>
+        <td>
+            9:00 PM
+        </td>
+        <td>
+            sun
+        </td>
+        <td>
+            m
+        </td>
+        <td>
+           t 
+        </td>
+        <td>
+           w 
+        </td>
+        <td>
+            th
+        </td>
+        <td>
+            f
+        </td>
+        <td>
+            sat
+        </td>
+    </tr>
+    <tr>
+        <td>
+            10:00 PM
+        </td>
+        <td>
+            sun
+        </td>
+        <td>
+            m
+        </td>
+        <td>
+           t 
+        </td>
+        <td>
+           w 
+        </td>
+        <td>
+            th
+        </td>
+        <td>
+            f
+        </td>
+        <td>
+            sat
+        </td>
+    </tr>
+</table>
+ 
+ 
+ {% endblock %}
